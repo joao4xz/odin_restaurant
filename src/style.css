@@ -1,7 +1,101 @@
-body {
+@font-face {
+  font-family: 'Shadow Font';
+  src: url('./assets/fonts/Budge-Shadow.woff') format('woff');
+}
+@font-face {
+  font-family: 'Line Font';
+  src: url('./assets/fonts/Budge-Line.woff') format('woff');
+}
+@font-face {
+  font-family: 'Header Font';
+  src: url('./assets/fonts/Budge-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'TextFont';
+  src: url('./assets/fonts/BudgePair-Regular.woff') format('woff');
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-blue: #3D3B8E;
+  --light-blue: #6883BA;
+  --pink: #E072A4;
+  --white: #F9F9F9;
+}
+
+#content {
+  height: 100vh;
+}
+
+body {
+  background-color: #dae4df;
+}
+
+header {
+  width: 100vw;
+  height: 12%;
+  background-color: var(--dark-blue);
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+header h1 {
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#shadow {
+  font-family: 'Shadow Font';
+  color: var(--light-blue);
+}
+
+#text {
+  font-family: 'Header Font';
+  color: var(--white);
+  
+}
+
+#line {
+  font-family: 'Line Font';
+  color: var(--pink);
+}
+
+main {
+  height: 88%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutCard {
+  width: 40vw;
+  background-color: var(--pink);
+  padding: 1.5rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+  gap: 1rem;
+  border-radius: 3vh;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.aboutCard p {
+  color: var(--white);
+  font-family: 'TextFont';
+  font-size: 1.5rem;
 }
 
 img {
-  width: 30rem;
+  width: 20rem;
+  border-radius: 50%;
 }
