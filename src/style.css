@@ -86,6 +86,7 @@ nav {
   position: relative;
   padding: 0.2rem 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .nav-item::after {
@@ -107,7 +108,7 @@ nav {
   transform: translate3d(0, 0, 0);
 }
 
-.home::after {
+.selected::after {
   background-color: var(--white);
   opacity: 1;
   transform: translate3d(0, 0, 0);
