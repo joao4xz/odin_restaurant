@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import { createHeader } from './components/header.js'
 import { createHomePage } from './components/pages/homePage.js'
 
