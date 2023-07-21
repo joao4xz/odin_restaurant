@@ -5,7 +5,7 @@ export function createHomePage() {
   const main = document.createElement('main');
 
   const aboutCard = document.createElement('div');
-  aboutCard.classList.add('aboutCard');
+  aboutCard.classList.add('mainCard');
 
   const p = document.createElement('p');
   p.textContent = 'Discover a world of flavors at Frosty Delights, where ice cream is an art form. Experience an explosion of tastes, carefully blended with natural ingredients. Satisfy your cravings and create your own edible masterpiece.'

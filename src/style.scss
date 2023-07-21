@@ -1,3 +1,4 @@
+// Fonts
 @font-face {
   font-family: 'Shadow Font';
   src: url('./assets/fonts/Budge-Shadow.woff') format('woff');
@@ -15,11 +16,13 @@
   src: url('./assets/fonts/BudgePair-Regular.woff') format('woff');
 }
 
+// Variables
 $dark-blue: #3D3B8E;
 $light-blue: #6883BA;
 $pink: #E072A4;
 $white: #F9F9F9;
 
+// Hover animation mixin
 @mixin hoverAnimation($underlineColor) {
   font-family: 'TextFont';
   text-decoration: none;
@@ -48,19 +51,14 @@ $white: #F9F9F9;
   }
 }
 
+// Reset
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --dark-blue: #3D3B8E;
-  --light-blue: #6883BA;
-  --pink: #E072A4;
-  --white: #F9F9F9;
-}
-
+// Body
 #content {
   height: 100vh;
 }
@@ -69,6 +67,7 @@ body {
   background-color: #dae4df;
 }
 
+// "Frosty Delights" header text
 header {
   width: 100vw;
   height: 12%;
@@ -102,6 +101,7 @@ header {
   color: $pink;
 }
 
+// Nav Bar
 nav {
   margin-right: 15rem;
   width: 30%;
@@ -120,6 +120,7 @@ nav {
   transform: translate3d(0, 0, 0);
 }
 
+// Main Container (Container below header)
 main {
   height: 88%;
   display: flex;
@@ -128,31 +129,70 @@ main {
   align-items: center;
 }
 
-.aboutCard {
+// Home Page
+.mainCard {
   width: 40vw;
-  background-color: $pink;
   padding: 1.5rem;
-  margin: 1rem;
+  background-color: $pink;
   display: flex;
   flex-direction: column;
-  align-items: center;;
+  align-items: center;
   gap: 1rem;
   border-radius: 3vh;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
-.aboutCard p {
+.mainCard p {
   color: $white;
   font-family: 'TextFont';
   font-size: 1.5rem;
 }
 
-img {
+.mainCard img {
   width: 20rem;
   border-radius: 50%;
 }
 
-.aboutCard a {
+.mainCard a {
   font-size: 1.5rem;
   @include hoverAnimation($white);
+}
+
+// Menu Page
+.menuCard {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.iceCreamCard {
+  border: solid 2px $white;
+  border-radius: 2vh;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: $white;
+  transition: 0.3s ease;
+  p {
+    color: $pink;
+    font-size: 0.8rem;
+  }
+  h2 {
+    font-size: 1rem;
+    color: $pink;
+    font-family: 'TextFont';
+  }
+  img {
+    width: 100px;
+  }
+  &:hover {
+    background-color: $pink;
+    p, h2 {
+      color: $white;
+    }
+  }
 }
