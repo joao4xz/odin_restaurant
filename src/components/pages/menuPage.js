@@ -1,9 +1,9 @@
-import iceCreamImage1 from '/src/assets/images/icecream1.png'
-import iceCreamImage2 from '/src/assets/images/icecream2.png'
-import iceCreamImage3 from '/src/assets/images/icecream3.png'
-import iceCreamImage4 from '/src/assets/images/icecream4.png'
-import iceCreamImage5 from '/src/assets/images/icecream5.png'
-import iceCreamImage6 from '/src/assets/images/icecream6.png'
+import iceCreamImage1 from '/src/assets/images/menuPage/icecream1.png'
+import iceCreamImage2 from '/src/assets/images/menuPage/icecream2.png'
+import iceCreamImage3 from '/src/assets/images/menuPage/icecream3.png'
+import iceCreamImage4 from '/src/assets/images/menuPage/icecream4.png'
+import iceCreamImage5 from '/src/assets/images/menuPage/icecream5.png'
+import iceCreamImage6 from '/src/assets/images/menuPage/icecream6.png'
 
 function _createIceCreamCard(iceCreamImage, iceCreamTitle, iceCreamDescription) {
   const iceCream = document.createElement('div');
