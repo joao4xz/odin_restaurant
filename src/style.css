@@ -42,30 +42,75 @@ header {
   background-color: var(--dark-blue);
   position: relative;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 header h1 {
   font-size: 4rem;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 10rem;
+  transform: translate(0, -50%);
 }
 
-#shadow {
+.shadow {
   font-family: 'Shadow Font';
   color: var(--light-blue);
 }
 
-#text {
+.text {
   font-family: 'Header Font';
   color: var(--white);
-  
 }
 
-#line {
+.line {
   font-family: 'Line Font';
   color: var(--pink);
+}
+
+nav {
+  margin-right: 15rem;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  font-family: 'TextFont';
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--white);
+  display: block;
+  position: relative;
+  padding: 0.2rem 0;
+  overflow: hidden;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: hotpink;
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.home::after {
+  background-color: var(--white);
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 main {
@@ -98,4 +143,11 @@ main {
 img {
   width: 20rem;
   border-radius: 50%;
+}
+
+.aboutCard a {
+  color: var(--white);
+  font-family: 'TextFont';
+  font-size: 1.5rem;
+  text-decoration: none;
 }
