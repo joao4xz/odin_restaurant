@@ -17,8 +17,8 @@ function createHeader(selected, container) {
   h1Line.classList.add('line');
 
   header.appendChild(h1Shadow);
-  header.appendChild(h1Text);
-  header.appendChild(h1Line);
+  h1Shadow.appendChild(h1Text);
+  h1Shadow.appendChild(h1Line);
 
   // Nav Bar
   const nav = document.createElement('nav');

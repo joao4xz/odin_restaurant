@@ -16,6 +16,20 @@
   src: url('./assets/fonts/BudgePair-Regular.woff') format('woff');
 }
 
+@media screen and (max-width: 1299px) {
+  #content header {
+    justify-content: center;
+    
+  }
+  .contactCard img {
+    // display: none;
+  }
+  .shadow {
+    display: none;
+  }
+
+}
+
 // Variables
 $dark-blue: #3D3B8E;
 $light-blue: #6883BA;
@@ -61,6 +75,8 @@ $white: #F9F9F9;
 // Body
 #content {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -69,42 +85,41 @@ body {
 
 // "Frosty Delights" header text
 header {
-  width: 100vw;
-  height: 12%;
+  padding: 0.5rem 10rem;
   background-color: $dark-blue;
   position: relative;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   h1 {
     font-size: 4rem;
-    position: absolute;
-    top: 50%;
-    left: 10rem;
-    transform: translate(0, -50%);
   }
 }
 
 .shadow {
   font-family: 'Shadow Font';
   color: $light-blue;
+  position: relative;
 }
 
 .text {
   font-family: 'Header Font';
   color: $white;
+  position: absolute;
+  top: 0;
 }
 
 .line {
   font-family: 'Line Font';
   color: $pink;
+  position: absolute;
+  top: 0;
 }
 
 // Nav Bar
 nav {
-  margin-right: 15rem;
-  width: 30%;
+  gap: 10rem;
   display: flex;
   justify-content: space-between;
 }
@@ -122,17 +137,18 @@ nav {
 
 // Main Container (Container below header)
 main {
-  height: 88%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 // Home Page
 .mainCard {
-  width: 40vw;
+  width: clamp(450px, 40vw, 700px);
   padding: 1.5rem;
+  margin: 1rem 0;
   background-color: $pink;
   display: flex;
   flex-direction: column;
@@ -149,7 +165,7 @@ main {
 }
 
 .homeCard img {
-  width: 20rem;
+  width: clamp(250px, 30vw, 320px);
   border-radius: 50%;
 }
 
@@ -162,6 +178,7 @@ main {
 .menuCard {
   padding: 2rem;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
@@ -210,7 +227,7 @@ main {
     font-size: 1.5rem;
   }
   img {
-    width: 500px;
+    width: min(95%,500px);
     margin-top: 1rem;
     border: 4px solid $white;
     border-radius: 2vh;
